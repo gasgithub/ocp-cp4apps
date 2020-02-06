@@ -1,4 +1,4 @@
-#Installation of load balancer
+# Installation of load balancer
 ```
 [centos@lb ~]$ sudo -i
 [root@lb ~]# yum -y install haproxy
@@ -50,4 +50,14 @@ Complete!
 
 # configure lb
 
+Configure haproxy.conf file - see attachment
 
+## start haproxy
+```
+[root@lb haproxy]# systemctl enable haproxy
+Created symlink from /etc/systemd/system/multi-user.target.wants/haproxy.service to /usr/lib/systemd/system/haproxy.service.
+[root@lb haproxy]# systemctl start haproxy
+[root@lb haproxy]# ps -eaf | grep hapro
+root     20784     1  0 16:22 ?        00:00:00 /usr/sbin/haproxy-systemd-wrapper -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid
+root     20785 20784  0 16:22 ?        00:00:00 /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid -Ds
+```
