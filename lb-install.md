@@ -1,4 +1,4 @@
-Installation of load balancer
+#Installation of load balancer
 
 [centos@lb ~]$ sudo -i
 [root@lb ~]# yum -y install haproxy
@@ -47,5 +47,7 @@ Installed:
 
 Complete!
 
+
+# configure lb
 
 
