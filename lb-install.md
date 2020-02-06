@@ -1,5 +1,5 @@
 #Installation of load balancer
-
+```
 [centos@lb ~]$ sudo -i
 [root@lb ~]# yum -y install haproxy
 Loaded plugins: fastestmirror
@@ -46,7 +46,7 @@ Installed:
   haproxy.x86_64 0:1.5.18-9.el7
 
 Complete!
-
+```
 
 # configure lb
 
