@@ -6,7 +6,7 @@ drugi plik z załącznika /var/named/openshift-poc.dev.test.com.pl.db
 
 systemctl start named
 systemctl status named
-systemctl enabled named
+systemctl enable named
 
 firewall-cmd --zone=public --add-service=dns --permanent
 firewall-cmd --reload
