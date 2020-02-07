@@ -1,0 +1,19 @@
+```
+[root@lb haproxy]# systemctl status haproxy -l
+● haproxy.service - HAProxy Load Balancer
+   Loaded: loaded (/usr/lib/systemd/system/haproxy.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Fri 2020-02-07 11:11:43 CET; 31s ago
+  Process: 21599 ExecStart=/usr/sbin/haproxy-systemd-wrapper -f /etc/haproxy/haproxy.cfg -p /run/haproxy.pid $OPTIONS (code=exited, status=1/FAILURE)
+ Main PID: 21599 (code=exited, status=1/FAILURE)
+
+Feb 07 11:11:43 lb.novalocal haproxy-systemd-wrapper[21599]: [WARNING] 037/111143 (21600) : parsing [/etc/haproxy/haproxy.cfg:43] : 'option httplog' not usable with frontend 'https' (needs 'mode http'). Falling back to 'option tcplog'.
+Feb 07 11:11:43 lb.novalocal haproxy-systemd-wrapper[21599]: [WARNING] 037/111143 (21600) : config : 'option forwardfor' ignored for frontend 'https' as it requires HTTP mode.
+Feb 07 11:11:43 lb.novalocal haproxy-systemd-wrapper[21599]: [WARNING] 037/111143 (21600) : config : 'option forwardfor' ignored for backend 'api' as it requires HTTP mode.
+Feb 07 11:11:43 lb.novalocal haproxy-systemd-wrapper[21599]: [WARNING] 037/111143 (21600) : config : 'option forwardfor' ignored for backend 'machine-config' as it requires HTTP mode.
+Feb 07 11:11:43 lb.novalocal haproxy-systemd-wrapper[21599]: [WARNING] 037/111143 (21600) : config : 'option forwardfor' ignored for backend 'https' as it requires HTTP mode.
+Feb 07 11:11:43 lb.novalocal haproxy-systemd-wrapper[21599]: [ALERT] 037/111143 (21600) : Fatal errors found in configuration.
+Feb 07 11:11:43 lb.novalocal haproxy-systemd-wrapper[21599]: haproxy-systemd-wrapper: exit, haproxy RC=1
+Feb 07 11:11:43 lb.novalocal systemd[1]: haproxy.service: main process exited, code=exited, status=1/FAILURE
+Feb 07 11:11:43 lb.novalocal systemd[1]: Unit haproxy.service entered failed state.
+Feb 07 11:11:43 lb.novalocal systemd[1]: haproxy.service failed.
+```
