@@ -1,0 +1,21 @@
+@       IN      SOA     lb.openshift-poc.dev.test.com.pl. root.openshift-poc.dev.test.com.pl.     (
+                  1 ;Serial Number
+                  1h ;refresh
+                  1h ;retry
+                  4w ;expire
+                  1h ;minimum
+
+)
+
+19.0.6.in-addr.arpa.                IN      NS      lb.openshift-poc.dev.test.com.pl.
+85		IN	PTR	bastion.openshift-poc.dev.test.com.pl.
+127   IN  PTR boot.openshift-poc.dev.test.com.pl.
+150   IN  PTR lb.openshift-poc.dev.test.com.pl.
+238   IN  PTR master1.openshift-poc.dev.test.com.pl.
+240   IN  PTR master2.openshift-poc.dev.test.com.pl.
+77   IN  PTR master3.openshift-poc.dev.test.com.pl.
+98   IN  PTR nfs.openshift-poc.dev.test.com.pl.
+174   IN  PTR worker1.openshift-poc.dev.test.com.pl.
+148   IN  PTR worker2.openshift-poc.dev.test.com.pl.
+39   IN  PTR worker3.openshift-poc.dev.test.com.pl.
+220   IN  PTR worker4.openshift-poc.dev.test.com.pl.
