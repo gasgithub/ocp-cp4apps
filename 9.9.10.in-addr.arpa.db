@@ -1,0 +1,13 @@
+@       IN      SOA     lb.openshift-poc.dev.test.com.pl. root.openshift-poc.dev.test.com.pl.     (
+                  1 ;Serial Number
+                  1h ;refresh
+                  1h ;retry
+                  4w ;expire
+                  1h ;minimum
+
+)
+
+9.9.10.in-addr.arpa.                IN      NS      lb.openshift-poc.dev.test.com.pl.
+
+
+
