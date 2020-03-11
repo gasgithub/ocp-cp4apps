@@ -1,4 +1,6 @@
+Create mirror
 
+```
 export HTTP_PROXY=proxyx.cn.in.pekao.com.pl:8080 HTTPS_PROXY=proxyx.cn.in.pekao.com.pl:8080
 export http_proxy=proxyx.cn.in.pekao.com.pl:8080 https_proxy=proxyx.cn.in.pekao.com.pl:8080
 export no_proxy=bastion.openshift-poc.dev.pekao.com.pl,*.openshift-poc.dev.pekao.com.pl
@@ -12,4 +14,4 @@ export RELEASE_NAME="ocp-release"
 
 
 oc adm -a ${LOCAL_SECRET_JSON} release mirror --from=quay.io/${PRODUCT_REPO}/${RELEASE_NAME}:${OCP_RELEASE} --to=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY} --to-release-image=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE} --loglevel=10
-
+```
