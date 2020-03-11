@@ -15,3 +15,32 @@ export RELEASE_NAME="ocp-release"
 
 oc adm -a ${LOCAL_SECRET_JSON} release mirror --from=quay.io/${PRODUCT_REPO}/${RELEASE_NAME}:${OCP_RELEASE} --to=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY} --to-release-image=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE} --loglevel=10
 ```
+
+To use the new mirrored repository to install, add the following section to the install-config.yaml:
+```
+imageContentSources:
+- mirrors:
+  - bastion.openshift-poc.dev.pekao.com.pl:5000/ocp4/openshift4
+  source: quay.io/openshift-release-dev/ocp-release
+- mirrors:
+  - bastion.openshift-poc.dev.pekao.com.pl:5000/ocp4/openshift4
+  source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
+```
+
+To use the new mirrored repository for upgrades, use the following to create an ImageContentSourcePolicy:
+```
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  name: example
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - bastion.openshift-poc.dev.pekao.com.pl:5000/ocp4/openshift4
+    source: quay.io/openshift-release-dev/ocp-release
+  - mirrors:
+    - bastion.openshift-poc.dev.pekao.com.pl:5000/ocp4/openshift4
+    source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
+```
+
+
