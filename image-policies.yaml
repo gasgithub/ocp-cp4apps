@@ -1,0 +1,39 @@
+[root@bastion ~]# oc describe imagecontentsourcepolicy
+Name:         image-policy-0
+Namespace:
+Labels:       <none>
+Annotations:  <none>
+API Version:  operator.openshift.io/v1alpha1
+Kind:         ImageContentSourcePolicy
+Metadata:
+  Creation Timestamp:  2020-03-11T15:20:43Z
+  Generation:          1
+  Resource Version:    432
+  Self Link:           /apis/operator.openshift.io/v1alpha1/imagecontentsourcepolicies/image-policy-0
+  UID:                 e015a43d-63ab-11ea-badf-fa163e1dac5e
+Spec:
+  Repository Digest Mirrors:
+    Mirrors:
+      bastion.openshift-poc.dev.pekao.com.pl:5000/ocp4/openshift4
+    Source:  quay.io/openshift-release-dev/ocp-release
+Events:      <none>
+
+
+Name:         image-policy-1
+Namespace:
+Labels:       <none>
+Annotations:  <none>
+API Version:  operator.openshift.io/v1alpha1
+Kind:         ImageContentSourcePolicy
+Metadata:
+  Creation Timestamp:  2020-03-11T15:20:44Z
+  Generation:          1
+  Resource Version:    434
+  Self Link:           /apis/operator.openshift.io/v1alpha1/imagecontentsourcepolicies/image-policy-1
+  UID:                 e031d5b4-63ab-11ea-badf-fa163e1dac5e
+Spec:
+  Repository Digest Mirrors:
+    Mirrors:
+      bastion.openshift-poc.dev.pekao.com.pl:5000/ocp4/openshift4
+    Source:  quay.io/openshift-release-dev/ocp-v4.0-art-dev
+Events:      <none>
