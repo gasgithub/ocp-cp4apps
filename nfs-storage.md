@@ -1,3 +1,4 @@
+```
 fdisk -l
     7  mkdir /osrepo
     8  vgs
@@ -19,3 +20,4 @@ fdisk -l
    30  mount -a
    31  mount
    32  cat /etc/exports
+```
