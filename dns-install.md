@@ -3,6 +3,7 @@ yum install -y bind bind-utils
 
 pliki z załącznika /etc/named.conf
 drugi plik z załącznika /var/named/openshift-poc.dev.test.com.pl.db
+trzeci revers /var/named/19.0.6.in-addr.arpa.db
 
 systemctl start named
 systemctl status named
