@@ -40,3 +40,6 @@ oc delete user xyz
 oc get identity
 oc delete identity xyz-ident
 ```
+
+Set cluster role:  
+`oc adm policy add-cluster-role-to-user cluster-admin xyz`
